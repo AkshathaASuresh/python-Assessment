@@ -1,0 +1,30 @@
+import math
+class Point:
+    def __init__(self, a=0,b=0):
+        self.a=a
+        self.b=b
+    def distance_origin(self):
+        d=math.sqrt(self.a**2+self.b**2)
+        return d
+    def distance_2points(self, p):
+        d= math.sqrt((p.a-self.a)**2+(p.b-self.b)**2)
+        return d
+    def midpoint(self,p):
+        m=(self.a+p.a)/2
+        n=(self.b+p.b)/2
+        return m,n
+        
+p1= Point(2,5)
+p2=Point(3,3)
+print(p1.distance_origin())
+print(p1.distance_2points(p2)) 
+print(p1.midpoint(p2)) 
+
+
+
+
+__new__ handles object creation
+
+
+
+__init__ handles object initialization.
